@@ -3,6 +3,7 @@ var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
 var li = document.getElementsByClassName("li");
 
+
 //length of the input value in the text box
 function inputLength() {
 	return input.value.length;
@@ -22,6 +23,13 @@ function createListElement() {
 	deleteButton.appendChild(document.createTextNode("X"));
 	//attached on the <li>
 	li.appendChild(deleteButton);
+	//when click will delete the list
+	deleteButton.addEventListener("click",deleteListItem);
+}
+
+//delete the list
+function deleteListItem(event) {
+	event.target.parentElement.remove();
 }
 
 //using click add list
