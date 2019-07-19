@@ -14,6 +14,14 @@ function createListElement() {
 	li.appendChild(document.createTextNode(input.value));//attached on the botton of the list
 	ul.appendChild(li);//attched this "li" under the unorder list "ul"
 	input.value = "";
+	//create a delete button
+	var deleteButton = document.createElement("button"); 
+	//style for the delete button
+	deleteButton.classList.add("deleteButton");
+	//style X in the delete button by create a text node
+	deleteButton.appendChild(document.createTextNode("X"));
+	//attached on the <li>
+	li.appendChild(deleteButton);
 }
 
 //using click add list
@@ -35,10 +43,13 @@ function changeClass(event) {
 	event.target.classList.toggle("done");
 }
 
+
+
 ul.addEventListener("click", changeClass);
 
 button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
+
 
 
