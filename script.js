@@ -16,12 +16,14 @@ function createListElement() {
 	input.value = "";
 }
 
+//using click add list
 function addListAfterClick() {
 	if (inputLength() > 0) {
 		createListElement();
 	}
 }
 
+//using keypress add list
 function addListAfterKeypress(event) {
 	if (inputLength() > 0 && event.keyCode === 13) {
 		createListElement();
