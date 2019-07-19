@@ -27,8 +27,12 @@ function addListAfterKeypress(event) {
 	}
 }
 
+//toggle .done class on and off if click on the list item.
+function changeClass(event) {
+	event.target.classList.toggle("done");
+}
 
-
+ul.addEventListener("click", changeClass);
 
 button.addEventListener("click", addListAfterClick);
 
