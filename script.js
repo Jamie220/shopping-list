@@ -8,10 +8,11 @@ function inputLength() {
 	return input.value.length;
 }
 
+//create a new list item 
 function createListElement() {
-	var li = document.createElement("li");
-	li.appendChild(document.createTextNode(input.value));
-	ul.appendChild(li);
+	var li = document.createElement("li");//create a <li> element
+	li.appendChild(document.createTextNode(input.value));//attached on the botton of the list
+	ul.appendChild(li);//attched this "li" under the unorder list "ul"
 	input.value = "";
 }
 
