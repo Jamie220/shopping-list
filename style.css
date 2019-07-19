@@ -1,21 +1,25 @@
-.li_box{
-  display: flex;
-  width: 100%;
-}
-li{
-  cursor: pointer;
-  padding: 10px;
-  line-height: 1.5;
-  border-radius: 50px;
-  border: 3px solid #BADA55;
-}
-li:hover{
-  background-color: bisque;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
-  box-shadow:         3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+body{
+  text-align: center
 }
 
+li{
+  display: flex;
+  text-align: center;
+  padding: 10px;
+  background-color: aliceblue;
+  border: aliceblue;
+  border-radius: 5px;
+  margin: 1.5px;
+}
+
+ul.shoppingList{
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 30%;
+  position: relative;
+  cursor: pointer;
+}
 
 .coolTitle {
   text-align: center;
@@ -39,4 +43,23 @@ li:hover{
 
 .done {
   text-decoration: line-through;
+}
+
+.deleteButton{
+  cursor: pointer;
+  border-radius: 5px;
+  background: #db0808;
+  right: 0;
+  border: none;
+  color: #fff;
+  margin-top: -8px;
+  padding: 8px;
+  transition: background 1s;
+  font-weight: bold;
+  outline: none;
+  position: absolute;
+}
+
+.deleteButton:hover{
+  background: #ff0000;
 }
